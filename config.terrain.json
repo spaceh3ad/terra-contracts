@@ -1,0 +1,49 @@
+{
+  "_global": {
+    "_base": {
+      "instantiation": {
+        "instantiateMsg": {
+          "name": "TestToken",
+          "symbol": "TTT",
+          "decimals": 3,
+          "initial_balances": [
+            {
+              "address": "terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v",
+              "amount": "10000"
+            }
+          ]
+        }
+      }
+    },
+    "staking": {
+      "instantiation": {
+        "instantiateMsg": {
+          "denom": {
+            "cw20": "terra1ulgw0td86nvs4wtpsc80thv6xelk76ut7a7apj"
+          },
+          "tokens_per_weight": "15",
+          "min_bond": "1000",
+          "unbonding_period": { "time": 1000 }
+        }
+      }
+    }
+  },
+  "mainnet": {
+    "_connection": {
+      "chainID": "columbus-5",
+      "URL": "https://lcd.terra.dev"
+    }
+  },
+  "testnet": {
+    "_connection": {
+      "chainID": "bombay-12",
+      "URL": "https://bombay-lcd.terra.dev"
+    }
+  },
+  "localterra": {
+    "_connection": {
+      "chainID": "localterra",
+      "URL": "http://localhost:3060"
+    }
+  }
+}
